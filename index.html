@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top 10 Curiosidades sobre a Soph Soph</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: pink;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-image: url('https://i.pinimg.com/originals/5e/38/87/5e3887ff421bc5b8f5fb60dc5c52ff56.gif'); /* Imagem de fundo animada com corações */
+            background-size: cover;
+            background-position: center;
+        }
+
+        .container {
+            width: 80%;
+            background-color: rgba(255, 255, 255, 0.8); /* Fundo branco semitransparente para melhorar a leitura */
+            padding: 20px;
+            border-radius: 15px;
+        }
+
+        h1, p {
+            color: #FF1493;
+            font-size: 36px; /* Aumentei o tamanho do texto */
+        }
+
+        .btn {
+            background-color: purple;
+            color: white;
+            border: none;
+            padding: 20px 40px; /* Aumentei o tamanho do botão */
+            font-size: 24px; /* Aumentei o texto do botão */
+            cursor: pointer;
+            margin-top: 20px;
+            border-radius: 10px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .btn:hover {
+            background-color: darkviolet;
+            transform: scale(1.05);
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        img {
+            width: 400px; /* Aumentei o tamanho das imagens */
+            height: auto;
+            margin-top: 20px;
+            border-radius: 15px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            color: white;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="title">Top 10 Curiosidades sobre a Soph Soph:</h1>
+        <button class="btn" id="ver-button">Ver</button>
+
+        <div id="curiosidade-1" class="hidden">
+            <p>Gosta de uno (não gostei sem graça)</p>
+            <img src="https://i.pinimg.com/236x/b0/83/96/b083964b0ad045d273b40708afced11d.jpg" alt="Flor">
+            <button class="btn" id="next-button-1">Próximo</button>
+        </div>
+
+        <div id="curiosidade-2" class="hidden">
+            <p>É a menina mais inteligente e bonita que já conheci :)</p>
+            <img src="https://i.pinimg.com/736x/cb/7c/c5/cb7cc507684a71616bb81cebc0971968.jpg" alt="Flor">
+            <button class="btn" id="next-button-2">Próximo</button>
+        </div>
+
+        <div id="presente-intro" class="hidden">
+            <p>Quer um presente? clica ae então</p>
+            <button class="btn" id="open-present-button">Abrir Presente</button>
+        </div>
+
+        <div id="presente" class="hidden">
+            <p>Uma florzita para outra florzita. Soph Soph :)</p>
+            <img src="https://s2.glbimg.com/UVL0axnHr38qm6MAPALU4nWoHvQ=/s.glbimg.com/jo/g1/f/original/2015/07/02/gato-flor2.jpg" alt="Gato com flor">
+        </div>
+    </div>
+
+    <footer>
+        Todos os direitos reservados © 2024
+    </footer>
+
+    <script>
+        const verButton = document.getElementById('ver-button');
+        const title = document.getElementById('title');
+        const curiosidade1 = document.getElementById('curiosidade-1');
+        const nextButton1 = document.getElementById('next-button-1');
+        const curiosidade2 = document.getElementById('curiosidade-2');
+        const nextButton2 = document.getElementById('next-button-2');
+        const presenteIntro = document.getElementById('presente-intro');
+        const openPresentButton = document.getElementById('open-present-button');
+        const presente = document.getElementById('presente');
+
+        verButton.addEventListener('click', () => {
+            title.classList.add('hidden');
+            verButton.classList.add('hidden');
+            curiosidade1.classList.remove('hidden');
+        });
+
+        nextButton1.addEventListener('click', () => {
+            curiosidade1.classList.add('hidden');
+            curiosidade2.classList.remove('hidden');
+        });
+
+        nextButton2.addEventListener('click', () => {
+            curiosidade2.classList.add('hidden');
+            presenteIntro.classList.remove('hidden');
+        });
+
+        openPresentButton.addEventListener('click', () => {
+            presenteIntro.classList.add('hidden');
+            presente.classList.remove('hidden');
+        });
+    </script>
+</body>
+</html>
